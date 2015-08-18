@@ -34,7 +34,7 @@ void NES_LOADROMLIST() {
 	FSUSER_OpenDirectory(NULL, &romHandle, sdmcArchive, dirPath);
 
 	// Get number of files in directory
-	fileSystem.totalFiles = 0
+	fileSystem.totalFiles = 0;
 	while(1) {
 		u32 dataRead = 0;
 		FSDIR_Read(romHandle, &dataRead, 1, &dirStruct);
@@ -51,7 +51,7 @@ void NES_LOADROMLIST() {
 		u32 dataRead = 0;
 		FSDIR_Read(romHandle, &dataRead, 1, &dirStruct);
 		if(dataRead == 0) break;
-		unicodeToChar(&fileSystem.fileList[MAX_FILENAME_SIZE * fileSystem.totalFiles), dirStruct.name);
+		unicodeToChar(&fileSystem.fileList[MAX_FILENAME_SIZE * fileSystem.totalFiles], dirStruct.name);
 		fileSystem.totalFiles++;
 	}
 

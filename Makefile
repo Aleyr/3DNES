@@ -1,3 +1,6 @@
+export DEVKITPRO=/home/aleyr/devkitPro
+export DEVKITARM=/home/aleyr/devkitPro/devkitARM
+export CTRULIB=/home/aleyr/devkitPro/ctrulib/libctru
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
@@ -26,7 +29,7 @@ export TARGET		:=	$(shell basename $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
-INCLUDES	:=	include
+INCLUDES	:=	include include/gfx
 
 
 #---------------------------------------------------------------------------------

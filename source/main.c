@@ -47,7 +47,7 @@ void INIT_3DS() {
 	srvInit();	
 	fsInit();
 	aptInit();
-	gfxInit();
+	gfxInitDefault();//gfxInit();
 	hidInit(NULL);
 	gfxSet3D(false);
 
